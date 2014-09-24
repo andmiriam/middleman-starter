@@ -1,0 +1,69 @@
+/* Variables
+/* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
+
+/* 
+	Note:
+		+ Mixin names should describe what things ARE, not what they look like.
+		+ As much as it kills me, colour is spelled the American way to be consistant
+		  with colour declarations in css.
+	
+	For example, the following are good variable names:
+	$font-base, $font-header, $color-brand, $color-accent, $breakpoint-midsize, $breakpoint-small
+	
+	These are bad variable names:
+	$blue, $orange, $helvetica, $ipad, $iphone
+	
+	On naming conventions, a good convention is to use underscores for spaces, and dashes to indicate
+	a subsidiary relationship. This allows you to easily group variables by type.
+	
+	The following are good examples of variable groups named with a dash to indicate descendency:
+	
+	$font-x
+	$font_weight-x
+	$color-x
+	$icon-x
+	$breakpoint-x
+	
+*/
+
+
+/* The following variables are needed by some of our mixins and can be adjust to meet
+   the needs of the site.
+*/
+
+// Fonts
+$font_default_stack-serif: "Times New Roman", Times, serif;
+$font_default_stack-sans_serif: "Helvetica Neue", Arial, sans-serif;
+
+// Font weights
+// Note that these are essential for the font_weight mixin in _mixins.scss
+$font_weight-light: 100;
+$font_weight-medium: 400;
+$font_weight-normal: $font_weight-medium; // Basically an alias, for convenience
+$font_weight-bold: 700;
+$font_weight-black: 900;
+
+// Font sizes
+$font_size-body: 15;
+
+// Colours
+$color-brand: #2c8ebf;
+$color-base: #fff;
+$color-text: #222;
+
+// Grid
+$grid-padding: 16px;
+$form-padding: 200px;
+
+// Breakpoints
+$breakpoint-larger: 1281px; // large desktops - 1440 and up
+$breakpoint-large: 1025px; // screens larger than a landscape tablet
+$breakpoint-medium: 1024px; // landscape tablets
+$breakpoint-small: 768px; // portrait tablets
+$breakpoint-smaller: 767px; // largest phones
+$breakpoint-narrow: 480px; // iphones
+$breakpoint-smallest: 320px; // smaller phones
+
+//Body gutter
+$gutter: 40px;
+$gutter-smaller: 12px;

@@ -1,0 +1,26 @@
+/*
+	Print stylesheet.
+
+	Include the variable and mixin files, and others as neccesary.
+
+*/
+
+@import "variables";
+@import "mixins";
+
+@media print {
+  body {
+  	font-family: $font_default_stack-serif;
+  	background: none;
+  	color: #000;
+  }
+
+  // non printing things here
+  header, footer {
+    display: none;
+  }
+
+  a:after {
+  	content: " [" attr(href) "] ";
+  }
+}

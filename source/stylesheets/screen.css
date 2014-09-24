@@ -1,0 +1,624 @@
+/*
+	SASS & COMPASS BOILERPLATE
+	For documentation and more information on SASS and Compass, refer to the official documentation:
+		+ SASS: http://sass-lang.com
+		+ Compass: http://compass-style.org
+
+	This file acts as an asset manager and loads the following:
+		+ Compass files
+		+ Libraries
+		+ Variables (fonts, colours, etc)
+		+ Mixins (reusable styles)
+		+ Modules (larger, self-contained, reusable units)
+		+ Partials (parts of styling broken off for maintainability)
+		+ A top-down stylesheet
+
+	Note that files are included in order of necessity. For example, Compass CSS stuff can be used in
+	variables which can be used in mixins, modules, site styles, etc.
+
+	What about media queries?
+	Note that since SASS allows you to nest @media declarations, separate stylesheets containing
+	media queries are unnecessary. Nesting @media declarations also reinforces a modular approach.
+
+*/
+/*
+	Imported modules from Compass
+*/
+/* line 5, ../../../../.rvm/gems/ruby-2.0.0-p353/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../.rvm/gems/ruby-2.0.0-p353/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../.rvm/gems/ruby-2.0.0-p353/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../.rvm/gems/ruby-2.0.0-p353/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../.rvm/gems/ruby-2.0.0-p353/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../.rvm/gems/ruby-2.0.0-p353/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../.rvm/gems/ruby-2.0.0-p353/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../.rvm/gems/ruby-2.0.0-p353/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../.rvm/gems/ruby-2.0.0-p353/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*
+  Fonts
+  
+  Any @font-face or third party font imports should go in this file
+
+*/
+/*
+  Fonts
+  
+  Any @font-face or third party font imports should go in this file
+
+*/
+/*
+	Libraries, variables, sprites, and mixins 
+
+	An example of a SASS library is http://github.com/nathanshubert/Unicode-Shapes-Preprocessor-Library.
+	They should be prefixed with an underscore, stored in the includes directory,
+	and are included like such:
+	@import "includes/library-name";
+	
+	Variables and mixins are also included here.
+	
+*/
+/* Variables
+/* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
+/* 
+	Note:
+		+ Mixin names should describe what things ARE, not what they look like.
+		+ As much as it kills me, colour is spelled the American way to be consistant
+		  with colour declarations in css.
+	
+	For example, the following are good variable names:
+	$font-base, $font-header, $color-brand, $color-accent, $breakpoint-midsize, $breakpoint-small
+	
+	These are bad variable names:
+	$blue, $orange, $helvetica, $ipad, $iphone
+	
+	On naming conventions, a good convention is to use underscores for spaces, and dashes to indicate
+	a subsidiary relationship. This allows you to easily group variables by type.
+	
+	The following are good examples of variable groups named with a dash to indicate descendency:
+	
+	$font-x
+	$font_weight-x
+	$color-x
+	$icon-x
+	$breakpoint-x
+	
+*/
+/* The following variables are needed by some of our mixins and can be adjust to meet
+   the needs of the site.
+*/
+/* Mixins
+/* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
+/* 
+	Sprites 
+  To use compass's sprite generating awesomeness, uncomment the include following this 
+  comment block. 
+
+  _sprites.scss contains two items:
+    - A sprite-background mixin for sprites with a high pixel density counterpart
+    - A template to use vanilla compass sprites for compatibility
+  
+  To use the sprite-background mixin, you'll need two images of the same name, one in the
+  images/comman and one in the images/double directories. The mixin will automatically
+  use the right one.
+  
+  The template for vanilla compass sprites for compatibility is intended to be used for 
+  older broser support. Think rounded corners and such things.
+  
+*/
+/* 
+	Modules 
+	Self contained pieces of styling that can be reused.
+	Modules should have the following characteristics: 
+		+ Be context independent so they can be used anywhere.
+		+ Defined within a mixin so that they can be used easily, anywhere.
+		+ Be applied to a class that describes what the element IS, not what it looks like.
+		+ Contain their own variations, fallbacks, and possibly media queries
+	
+	Buttons are a good example of a module.
+
+	Module files should be prefixed with an underscore, stored in the modules directory, 
+	and included like such:
+	@import "modules/module-name";
+
+  Some default modules are provided bellow. Uncomment them to use them.
+
+*/
+/* 
+  Default styles
+  
+  Since we're using the Meyer reset, we need to put default styles back in for wysiwyg areas.
+
+*/
+/* line 73, _scss/modules/_default-styles.scss */
+.wysiwyg {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.4em;
+}
+/* line 11, _scss/modules/_default-styles.scss */
+.wysiwyg strong {
+  font-weight: bold;
+  font-weight: 700;
+}
+/* line 14, _scss/modules/_default-styles.scss */
+.wysiwyg em {
+  font-style: italic;
+}
+/* line 17, _scss/modules/_default-styles.scss */
+.wysiwyg a {
+  text-decoration: none;
+  color: #2c8ebf;
+}
+/* line 19, _scss/_mixins.scss */
+.wysiwyg a:hover, .wysiwyg a:focus {
+  text-decoration: underline;
+}
+/* line 21, _scss/modules/_default-styles.scss */
+.wysiwyg sup, .wysiwyg sub {
+  font-size: smaller;
+}
+/* line 24, _scss/modules/_default-styles.scss */
+.wysiwyg sup {
+  vertical-align: super;
+}
+/* line 27, _scss/modules/_default-styles.scss */
+.wysiwyg sub {
+  vertical-align: sub;
+}
+/* line 30, _scss/modules/_default-styles.scss */
+.wysiwyg p, .wysiwyg ol, .wysiwyg ul {
+  margin-bottom: 1em;
+}
+/* line 33, _scss/modules/_default-styles.scss */
+.wysiwyg h2, .wysiwyg h3, .wysiwyg h4, .wysiwyg h5, .wysiwyg h6 {
+  margin-bottom: .2em;
+}
+/* line 36, _scss/modules/_default-styles.scss */
+.wysiwyg h2 {
+  font-size: 22px;
+}
+/* line 39, _scss/modules/_default-styles.scss */
+.wysiwyg h3, .wysiwyg h4 {
+  font-size: 18px;
+}
+/* line 42, _scss/modules/_default-styles.scss */
+.wysiwyg h3 {
+  text-transform: uppercase;
+}
+/* line 45, _scss/modules/_default-styles.scss */
+.wysiwyg h5, .wysiwyg h6 {
+  font-size: 16px;
+}
+/* line 48, _scss/modules/_default-styles.scss */
+.wysiwyg h5 {
+  text-transform: uppercase;
+}
+/* line 51, _scss/modules/_default-styles.scss */
+.wysiwyg li {
+  margin-left: 2em;
+}
+/* line 54, _scss/modules/_default-styles.scss */
+.wysiwyg ul li {
+  list-style: disc outside;
+}
+/* line 57, _scss/modules/_default-styles.scss */
+.wysiwyg ol li {
+  list-style: decimal outside;
+}
+/* line 60, _scss/modules/_default-styles.scss */
+.wysiwyg blockquote {
+  font-size: 1.25em;
+  line-height: 1.6em;
+  font-style: italic;
+  margin: 2em 5em;
+  border-bottom: 2px solid #2c8ebf;
+}
+/* line 67, _scss/modules/_default-styles.scss */
+.wysiwyg img, .wysiwyg iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Variables
+/* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
+/* line 4, _scss/modules/_module-library.scss */
+.library h6 {
+  text-transform: uppercase;
+  border-top: 1px solid #222;
+  display: block;
+  padding: 10px auto;
+  margin: 15px auto;
+  font-size: 11px;
+  font-size: 1.1rem;
+}
+
+/* Variables
+/* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
+/* line 3, _scss/modules/_code-highlight.scss */
+pre {
+  white-space: pre-wrap;
+  /* CSS3 browsers  */
+  white-space: -moz-pre-wrap !important;
+  /* 1999+ Mozilla  */
+  white-space: -pre-wrap;
+  /* Opera 4 thru 6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 and up */
+  word-wrap: break-word;
+  /* IE 5.5+ and up */
+  width: 99%;
+}
+
+/* line 11, _scss/modules/_code-highlight.scss */
+.highlight.ruby {
+  color: #222;
+  background-color: #eee;
+  padding: 20px;
+  margin: 20px;
+  width: 100%;
+  display: block;
+  /* Comment */
+  /* Error */
+  /* Keyword */
+  /* Comment.Multiline */
+  /* Comment.Single */
+  /* Comment.Special */
+  /* Generic.Emph */
+  /* Generic.Heading */
+  /* Generic.Prompt */
+  /* Generic.Strong */
+  /* Generic.Subheading */
+  /* Keyword.Constant */
+  /* Keyword.Declaration */
+  /* Keyword.Namespace */
+  /* Keyword.Reserved */
+  /* Literal.String */
+  /* Name.Class */
+  /* Name.Entity */
+  /* Name.Exception */
+  /* Name.Namespace */
+  /* Name.Tag */
+  /* Operator.Word */
+  /* Literal.String.Backtick */
+  /* Literal.String.Char */
+  /* Literal.String.Doc */
+  /* Literal.String.Double */
+  /* Literal.String.Escape */
+  /* Literal.String.Heredoc */
+  /* Literal.String.Interpol */
+  /* Literal.String.Other */
+  /* Literal.String.Regex */
+  /* Literal.String.Single */
+  /* Literal.String.Symbol */
+}
+/* line 18, _scss/modules/_code-highlight.scss */
+.highlight.ruby .hll {
+  background-color: #ffffcc;
+}
+/* line 19, _scss/modules/_code-highlight.scss */
+.highlight.ruby .c {
+  font-style: italic;
+}
+/* line 20, _scss/modules/_code-highlight.scss */
+.highlight.ruby .err {
+  border: 1px solid #FF0000;
+}
+/* line 21, _scss/modules/_code-highlight.scss */
+.highlight.ruby .k {
+  font-weight: bold;
+}
+/* line 22, _scss/modules/_code-highlight.scss */
+.highlight.ruby .cm {
+  font-style: italic;
+}
+/* line 23, _scss/modules/_code-highlight.scss */
+.highlight.ruby .c1 {
+  font-style: italic;
+}
+/* line 24, _scss/modules/_code-highlight.scss */
+.highlight.ruby .cs {
+  font-style: italic;
+}
+/* line 25, _scss/modules/_code-highlight.scss */
+.highlight.ruby .ge {
+  font-style: italic;
+}
+/* line 26, _scss/modules/_code-highlight.scss */
+.highlight.ruby .gh {
+  font-weight: bold;
+}
+/* line 27, _scss/modules/_code-highlight.scss */
+.highlight.ruby .gp {
+  font-weight: bold;
+}
+/* line 28, _scss/modules/_code-highlight.scss */
+.highlight.ruby .gs {
+  font-weight: bold;
+}
+/* line 29, _scss/modules/_code-highlight.scss */
+.highlight.ruby .gu {
+  font-weight: bold;
+}
+/* line 30, _scss/modules/_code-highlight.scss */
+.highlight.ruby .kc {
+  font-weight: bold;
+}
+/* line 31, _scss/modules/_code-highlight.scss */
+.highlight.ruby .kd {
+  font-weight: bold;
+}
+/* line 32, _scss/modules/_code-highlight.scss */
+.highlight.ruby .kn {
+  font-weight: bold;
+}
+/* line 33, _scss/modules/_code-highlight.scss */
+.highlight.ruby .kr {
+  font-weight: bold;
+}
+/* line 34, _scss/modules/_code-highlight.scss */
+.highlight.ruby .s {
+  font-style: italic;
+}
+/* line 35, _scss/modules/_code-highlight.scss */
+.highlight.ruby .nc {
+  font-weight: bold;
+}
+/* line 36, _scss/modules/_code-highlight.scss */
+.highlight.ruby .ni {
+  font-weight: bold;
+}
+/* line 37, _scss/modules/_code-highlight.scss */
+.highlight.ruby .ne {
+  font-weight: bold;
+}
+/* line 38, _scss/modules/_code-highlight.scss */
+.highlight.ruby .nn {
+  font-weight: bold;
+}
+/* line 39, _scss/modules/_code-highlight.scss */
+.highlight.ruby .nt {
+  font-weight: bold;
+}
+/* line 40, _scss/modules/_code-highlight.scss */
+.highlight.ruby .ow {
+  font-weight: bold;
+}
+/* line 41, _scss/modules/_code-highlight.scss */
+.highlight.ruby .sb {
+  font-style: italic;
+}
+/* line 42, _scss/modules/_code-highlight.scss */
+.highlight.ruby .sc {
+  font-style: italic;
+}
+/* line 43, _scss/modules/_code-highlight.scss */
+.highlight.ruby .sd {
+  font-style: italic;
+}
+/* line 44, _scss/modules/_code-highlight.scss */
+.highlight.ruby .s2 {
+  font-style: italic;
+}
+/* line 45, _scss/modules/_code-highlight.scss */
+.highlight.ruby .se {
+  font-weight: bold;
+  font-style: italic;
+}
+/* line 46, _scss/modules/_code-highlight.scss */
+.highlight.ruby .sh {
+  font-style: italic;
+}
+/* line 47, _scss/modules/_code-highlight.scss */
+.highlight.ruby .si {
+  font-weight: bold;
+  font-style: italic;
+}
+/* line 48, _scss/modules/_code-highlight.scss */
+.highlight.ruby .sx {
+  font-style: italic;
+}
+/* line 49, _scss/modules/_code-highlight.scss */
+.highlight.ruby .sr {
+  font-style: italic;
+}
+/* line 50, _scss/modules/_code-highlight.scss */
+.highlight.ruby .s1 {
+  font-style: italic;
+}
+/* line 51, _scss/modules/_code-highlight.scss */
+.highlight.ruby .ss {
+  font-style: italic;
+}
+
+/*
+  Drupal reset.
+  This resets a lot of default Drupal css.
+  NOTE: This file only exists in the drupal branch.
+
+*/
+/* 
+	Partials 
+	Pieces of code that aren't modular in nature, but are broken off for easier maintainability.
+	
+	Partials should be prefixed with an underscore, stored in the partials directory,
+	and included as such:
+	@import "partials/partial-name";
+	
+*/
+/*
+	Site styles 
+	A traditional-style top-down stylesheet. Note that this file isn't always neccesary per se.
+	Rather than putting everything in _style.scss, think about how your stylesheet can be broken
+	up into partials and modules.
+
+*/
+/* Global Styles
+/* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
+/* line 3, _scss/_style.scss */
+html {
+  font-size: 62.5%;
+  /* Sets up the Base 10 stuff */
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-size-adjust: none;
+  color: red;
+}
+
+/* line 10, _scss/_style.scss */
+body {
+  color: #222;
+  background: #fff;
+  margin: 0 auto;
+  min-width: 320px;
+  padding: 40px;
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+/* line 17, _scss/_style.scss */
+.ie8 body {
+  min-width: 1200px;
+}
+@media screen and (max-width: 767px) {
+  /* line 10, _scss/_style.scss */
+  body {
+    padding: 0;
+  }
+}
+/* line 24, _scss/_style.scss */
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  line-height: 1.2;
+  margin-top: 0.1em;
+  margin-bottom: 0.3em;
+  text-rendering: optimizeLegibility;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+/* line 31, _scss/_style.scss */
+body h1 {
+  font-weight: 700;
+  font-size: 32px;
+  font-size: 3.2rem;
+}
+/* line 35, _scss/_style.scss */
+body h2 {
+  font-weight: 700;
+  font-size: 25px;
+  font-size: 2.5rem;
+}
+/* line 39, _scss/_style.scss */
+body h3 {
+  font-weight: 700;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.4;
+}
+/* line 44, _scss/_style.scss */
+body h4 {
+  font-weight: 700;
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+/* line 48, _scss/_style.scss */
+body h5, body h6 {
+  font-weight: 700;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+/* line 52, _scss/_style.scss */
+body p {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.5em;
+  margin-bottom: 2.11111rem;
+  text-rendering: optimizeLegibility;
+}
+/* line 61, _scss/_style.scss */
+body a {
+  color: #2c8ebf;
+}
+/* line 63, _scss/_style.scss */
+body a:hover, body a:active body afocus {
+  color: #49a6d5;
+}
+/* line 68, _scss/_style.scss */
+body i, body em {
+  font-style: italic;
+}
+/* line 72, _scss/_style.scss */
+body b, body strong {
+  font-weight: 700;
+}
+
+/* line 78, _scss/_style.scss */
+.mobile-only {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  /* line 78, _scss/_style.scss */
+  .mobile-only {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 85, _scss/_style.scss */
+  .dt-only {
+    display: none;
+  }
+}

@@ -1,0 +1,49 @@
+<div class="newsletter">
+  <div class="header">
+    <h3 class="title">April 2015 Issue</h3>
+    <select class="newsletter-select">
+      <option value="audi" selected>Select a different Issue</option>
+      <option value="volvo">December 2014</option>
+      <option value="saab">September 2014</option>
+    </select>
+  </div>
+  
+  <div class="articles">
+    <div class="feature">
+      <span class="label">Feature</span>
+      <h2>Speaker named for Sacramento Commencement Ceremony</h2>
+      <%= lorem.paragraph %>
+    </div>
+    <!-- Needs to be the item-list partial but with variables -->
+    <div class="topic">
+      <span class="label">Topic</span>
+      <ul>
+        <li>
+          <a href="#">
+            <h3><%= lorem.words 5 %></h3>
+            <%= lorem.sentence %>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h3><%= lorem.words 5 %></h3>
+            <%= lorem.sentence %>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h3><%= lorem.words 5 %></h3>
+            <%= lorem.sentence %>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h3><%= lorem.words 5 %></h3>
+            <%= lorem.sentence %>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+</div>

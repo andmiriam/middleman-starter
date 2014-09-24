@@ -1,0 +1,18 @@
+---
+title: Full Width Layout
+layout: full
+---
+
+<!-- Add your site or application content here -->
+  <%= partial "/department-block" %>
+  <%= partial "/header-home" %>
+  <%= partial "/hero" %>
+  <% 1.upto(3) do %>
+    <%= partial "/feature-block" %>
+  <% end %>
+  <% 1.upto(6) do %>
+    <%= partial "/link-list" %>
+  <% end %>
+  <%= partial "/footer" %>
+  
+  

@@ -1,0 +1,21 @@
+{
+  "name": "National",
+  "version": "0.1.0",
+  "authors": [
+    "Ryan James <ryan.james@domain7.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-requestAnimationFrame": "~0.1.2",
+    "jquery": "~2.1.1",
+    "modernizr": "~2.8.3",
+    "picturefill": "~2.1.0"
+  }
+}

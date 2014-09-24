@@ -1,0 +1,89 @@
+/* Global Styles
+/* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
+html {
+  font-size: 62.5%; /* Sets up the Base 10 stuff */
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-size-adjust: none;
+  color: red;
+}
+
+body {
+  color: $color-text;
+  background: $color-base;
+  margin: 0 auto;
+  min-width: 320px;
+  padding: $gutter;
+  @include font_size($font_size-body);
+  .ie8 & {
+    min-width: 1200px;
+  } // ie8
+  @media screen and (max-width: $breakpoint-smaller){
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    margin-top: 0.1em;
+    margin-bottom: 0.3em;
+    text-rendering: optimizeLegibility;
+    font-family: $font_default_stack-sans_serif;
+  }
+  h1 {
+    font-weight: $font-weight-bold;
+    @include font_size(32);
+  }
+  h2 {
+    font-weight: $font-weight-bold;
+    @include font_size(25);
+  }
+  h3 {
+    font-weight: $font-weight-bold;
+    @include font_size(19);
+    line-height: 1.4;
+  }
+  h4 {
+    font-weight: $font-weight-bold;
+    @include font_size(15);
+  }
+  h5, h6 {
+    font-weight: $font-weight-bold;
+    @include font_size(14);
+  }
+  p {
+    font-family: inherit;
+    font-weight: normal;
+    @include font_size($font-size-body);
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+    margin-bottom: 2.11111rem;
+    text-rendering: optimizeLegibility; 
+  }
+  a {
+    color: $color-brand;
+    &:hover, &:active &focus {
+      color: lighten($color-brand, 10);
+    }
+  }
+  
+  i, em {
+    font-style: italic;
+  }
+  
+  b, strong {
+    font-weight: $font-weight-bold;
+  }
+}
+
+// Global classess for responsive visibility control
+.mobile-only {
+  display: none;
+  @media screen and (max-width: $breakpoint-smaller) {
+    display: block;
+  }
+}
+
+.dt-only {
+  @media screen and (max-width: $breakpoint-smaller) {
+    display: none;
+  }
+}

@@ -1,0 +1,12 @@
+/* Variables
+/* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
+.library {
+  h6 {
+    text-transform: uppercase;
+    border-top: 1px solid #222;
+    display: block;
+    padding: 10px auto;
+    margin: 15px auto;
+    @include font_size(11);
+  }
+}
