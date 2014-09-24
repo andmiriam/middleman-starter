@@ -21,5 +21,5 @@ This README will walk you through the steps necessary to get this application up
 
 ### Who do I talk to? ###
 
-* Miriam Thomas setup the project ([hi](twitter.com/andmiriam))
+* Miriam Thomas setup the project ([hi](http://twitter.com/andmiriam))
 * Need more info than that? Checkout the git log baby! 
