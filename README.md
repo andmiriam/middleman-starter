@@ -6,7 +6,6 @@ This README will walk you through the steps necessary to get this application up
 
 * This is a collection of files to help getting a middleman project setup that will output clean, organized html/css/js
 * Version 1.0
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ### How do I get set up? ###
 
