@@ -1,0 +1,1 @@
+@media print{body{font-family:"Times New Roman", Times, serif;background:none;color:#000}header,footer{display:none}a:after{content:" [" attr(href) "] "}}
