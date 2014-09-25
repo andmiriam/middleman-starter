@@ -276,7 +276,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* Variables
 /* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
-/* line 4, _scss/modules/_module-library.scss */
+/* line 3, _scss/modules/_module-library.scss */
+.library {
+  width: 80%;
+  margin: 0 auto;
+}
+/* line 6, _scss/modules/_module-library.scss */
+.library .nav {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 10%;
+  min-width: 50px;
+  border: 1px solid #eee;
+  background: #fefefe;
+  box-sizing: border-box;
+  padding: 10px;
+}
+/* line 16, _scss/modules/_module-library.scss */
+.library .nav li {
+  margin-bottom: 2px;
+}
+/* line 20, _scss/modules/_module-library.scss */
 .library h6 {
   text-transform: uppercase;
   border-top: 1px solid #222;

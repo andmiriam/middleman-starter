@@ -1,6 +1,22 @@
 /* Variables
 /* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
 .library {
+  width: 80%;
+  margin: 0 auto;
+  .nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 10%;
+    min-width: 50px;
+    border: 1px solid #eee;
+    background: #fefefe;
+    box-sizing: border-box;
+    padding: 10px;
+    li {
+      margin-bottom: 2px;
+    }
+  }
   h6 {
     text-transform: uppercase;
     border-top: 1px solid #222;
