@@ -18,7 +18,7 @@ module.exports = function(grunt){
         mainFiles: {
           'jquery-requestAnimationFrame': 'src/jquery.requestAnimationFrame.js',
         },
-        dest: '<%= paths.src %>/src/vendor.js',
+        dest: '<%= paths.src %>/_src/vendor/vendor.js',
         dependencies: {
           'jquery-requestAnimationFrame': 'jquery'
         },
@@ -28,21 +28,19 @@ module.exports = function(grunt){
       }
     },
 
-    // Concatenate all javascript to source/js/src/all.js
+    // Concatenate all javascript to source/js/_dist/all.js
     concat: {
       dist: {
-        src: ['<%= paths.src %>/_src/vendor.js', '<%= paths.src %>/_src/main.js'],
-        dest: '<%= paths.src %>/_src/all.js',
+        src: ['<%= paths.src %>/_src/vendor/vendor.js', '<%= paths.src %>/_src/modules/all.js'],
+        dest: '<%= paths.src %>/_dist/all.js',
       },
     },
 
-    // Minify vendor javascript to source/js/build/vendor.min.js
-    // Minify all javascript to source/js/build/all.min.js
+    // Minify all javascript to source/js/all.min.js
     uglify: {
       target: {
         files: {
-          '<%= paths.src %>/vendor.min.js': ['<%= paths.src %>/_src/vendor.js'],
-          '<%= paths.src %>/all.min.js': ['<%= paths.src %>/_src/vendor.js', '<%= paths.src %>/_src/main.js']
+          '<%= paths.src %>/all.min.js': ['<%= paths.src %>/_dist/all.js']
         }
       }
     }

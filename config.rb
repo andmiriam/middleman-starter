@@ -100,9 +100,9 @@ set :images_dir, 'img'
 
 set :fonts_dir, 'fonts'
 
-set :partials_dir, 'partials'
+set :partials_dir, 'modules'
 
-set :index_file, 'pages/index.html'
+set :index_file, 'index.html'
 
 activate :syntax
 

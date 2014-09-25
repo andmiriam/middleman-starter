@@ -9,44 +9,10 @@ pre {
 	width: 99%;
 }
 .highlight.ruby {
-  color:#222;
-  background-color:#eee;
   padding: 20px;
   margin: 20px;
-  width: 100%;
+  width: auto;
   display: block;
-  .hll { background-color: #ffffcc }
-  .c { font-style: italic } /* Comment */
-  .err { border: 1px solid #FF0000 } /* Error */
-  .k { font-weight: bold } /* Keyword */
-  .cm { font-style: italic } /* Comment.Multiline */
-  .c1 { font-style: italic } /* Comment.Single */
-  .cs { font-style: italic } /* Comment.Special */
-  .ge { font-style: italic } /* Generic.Emph */
-  .gh { font-weight: bold } /* Generic.Heading */
-  .gp { font-weight: bold } /* Generic.Prompt */
-  .gs { font-weight: bold } /* Generic.Strong */
-  .gu { font-weight: bold } /* Generic.Subheading */
-  .kc { font-weight: bold } /* Keyword.Constant */
-  .kd { font-weight: bold } /* Keyword.Declaration */
-  .kn { font-weight: bold } /* Keyword.Namespace */
-  .kr { font-weight: bold } /* Keyword.Reserved */
-  .s { font-style: italic } /* Literal.String */
-  .nc { font-weight: bold } /* Name.Class */
-  .ni { font-weight: bold } /* Name.Entity */
-  .ne { font-weight: bold } /* Name.Exception */
-  .nn { font-weight: bold } /* Name.Namespace */
-  .nt { font-weight: bold } /* Name.Tag */
-  .ow { font-weight: bold } /* Operator.Word */
-  .sb { font-style: italic } /* Literal.String.Backtick */
-  .sc { font-style: italic } /* Literal.String.Char */
-  .sd { font-style: italic } /* Literal.String.Doc */
-  .s2 { font-style: italic } /* Literal.String.Double */
-  .se { font-weight: bold; font-style: italic } /* Literal.String.Escape */
-  .sh { font-style: italic } /* Literal.String.Heredoc */
-  .si { font-weight: bold; font-style: italic } /* Literal.String.Interpol */
-  .sx { font-style: italic } /* Literal.String.Other */
-  .sr { font-style: italic } /* Literal.String.Regex */
-  .s1 { font-style: italic } /* Literal.String.Single */
-  .ss { font-style: italic } /* Literal.String.Symbol */
+  font-family: courier;
 }
+code.highlight,code.highlight pre{color:#fdce93;background-color:#3f3f3f}code.highlight .hll{background-color:#222}code.highlight .c{color:#7f9f7f}code.highlight .err{color:#e37170;background-color:#3d3535}code.highlight .g{color:#7f9f7f}code.highlight .k{color:#f0dfaf}code.highlight .l{color:#ccc}code.highlight .n{color:#dcdccc}code.highlight .o{color:#f0efd0}code.highlight .x{color:#ccc}code.highlight .p{color:#41706f}code.highlight .cm{color:#7f9f7f}code.highlight .cp{color:#7f9f7f}code.highlight .c1{color:#7f9f7f}code.highlight .cs{color:#cd0000;font-weight:bold}code.highlight .gd{color:#cd0000}code.highlight .ge{color:#ccc;font-style:italic}code.highlight .gr{color:red}code.highlight .gh{color:#dcdccc;font-weight:bold}code.highlight .gi{color:#00cd00}code.highlight .go{color:gray}code.highlight .gp{color:#dcdccc;font-weight:bold}code.highlight .gs{color:#ccc;font-weight:bold}code.highlight .gu{color:purple;font-weight:bold}code.highlight .gt{color:#0040D0}code.highlight .kc{color:#dca3a3}code.highlight .kd{color:#ffff86}code.highlight .kn{color:#dfaf8f;font-weight:bold}code.highlight .kp{color:#cdcf99}code.highlight .kr{color:#cdcd00}code.highlight .kt{color:#00cd00}code.highlight .ld{color:#cc9393}code.highlight .m{color:#8cd0d3}code.highlight .s{color:#cc9393}code.highlight .na{color:#9ac39f}code.highlight .nb{color:#efef8f}code.highlight .nc{color:#efef8f}code.highlight .no{color:#ccc}code.highlight .nd{color:#ccc}code.highlight .ni{color:#c28182}code.highlight .ne{color:#c3bf9f;font-weight:bold}code.highlight .nf{color:#efef8f}code.highlight .nl{color:#ccc}code.highlight .nn{color:#8fbede}code.highlight .nx{color:#ccc}code.highlight .py{color:#ccc}code.highlight .nt{color:#9ac39f}code.highlight .nv{color:#dcdccc}code.highlight .ow{color:#f0efd0}code.highlight .w{color:#ccc}code.highlight .mf{color:#8cd0d3}code.highlight .mh{color:#8cd0d3}code.highlight .mi{color:#8cd0d3}code.highlight .mo{color:#8cd0d3}code.highlight .sb{color:#cc9393}code.highlight .sc{color:#cc9393}code.highlight .sd{color:#cc9393}code.highlight .s2{color:#cc9393}code.highlight .se{color:#cc9393}code.highlight .sh{color:#cc9393}code.highlight .si{color:#cc9393}code.highlight .sx{color:#cc9393}code.highlight .sr{color:#cc9393}code.highlight .s1{color:#cc9393}code.highlight .ss{color:#cc9393}code.highlight .bp{color:#efef8f}code.highlight .vc{color:#efef8f}code.highlight .vg{color:#dcdccc}code.highlight .vi{color:#ffffc7}code.highlight .il{color:#8cd0d3}

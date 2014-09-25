@@ -88,7 +88,7 @@
   older broser support. Think rounded corners and such things.
   
 */
-// @import "includes/sprites";
+@import "includes/sprites";
 
 
 
@@ -112,16 +112,7 @@
 */
 
 @import "modules/default-styles";
-@import "modules/module-library";
 @import "modules/code-highlight";
-
-/*
-  Drupal reset.
-  This resets a lot of default Drupal css.
-  NOTE: This file only exists in the drupal branch.
-
-*/
-// @import "modules/drupal-reset";
 
 
 
@@ -135,7 +126,7 @@
 	
 */
 
-
+@import "partials/module-library";
 
 /*
 	Site styles 

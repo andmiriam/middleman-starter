@@ -2,7 +2,7 @@
 http_path = "/"
 css_dir = "/source/stylesheets"
 sass_dir = "/source/stylesheets/_scss"
-images_dir = "img"
+images_dir = "/source/img"
 javascripts_dir = "js"
 
 # You can select your preferred output style here (can be overridden via the command line):

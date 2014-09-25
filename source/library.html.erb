@@ -1,0 +1,25 @@
+---
+title: Module Library
+layout: full
+---
+
+<!-- Auto generated Library content here. First Nav then the Library -->
+<div class="library">
+  <div class="nav">
+    <ul>
+      <% Dir["source/modules/*.erb"].each do |file| %>  
+          <li><a href="#<%= File.basename(file,'.erb') %>"><%= File.basename(file,'.erb').gsub('-',' ').capitalize %></a></li>
+      <% end %>
+    </ul>
+  </div><!-- End Nav -->
+  <div class="library-items">
+      <% Dir["source/modules/*.erb"].each do |file| %>  
+          <div id="<%= File.basename(file,'.erb') %>">
+            <h3><%= File.basename(file,'.erb').gsub('-',' ').capitalize %></h3>
+            <%= partial File.basename(file) %>
+            <% code("ruby") do %><%= partial File.basename(file) %><% end %>
+          </div>
+          <hr>
+      <% end %>
+  </div><!-- end Library -->
+</div>
